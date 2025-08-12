@@ -1,0 +1,30 @@
+.header {
+  background-color: #2B0A0A;
+  color: #f1c40f;
+  padding: 2.5rem 0; /* Más altura */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center; /* Centrado */
+  align-items: center;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0;
+  background: linear-gradient(90deg, #f1c40f, #ffd700, #f1c40f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Hace que el gradiente sea visible */
+  text-transform: uppercase;
+}
