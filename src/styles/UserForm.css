@@ -13,13 +13,14 @@ body {
 }
 
 .form-card {
-  background: white;
-  padding: 7rem;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 25px 40px; /* menos padding lateral */
   width: 100%;
-  max-width: 400px;
+  max-width: 700px; /* límite para no deformar */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
+
 
 .form-card h2 {
   text-align: center;

@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ClientesList from "./pages/ClientesList";
-//import AddUser from "./pages/AddUser";
+
+//import AddCliente from "./pages/AddClient";
+import AddCliente from "./pages/AddClient2";
 //import EditUser from "./pages/EditUser";
 import Header from "./components/Header";
 
@@ -10,6 +12,7 @@ export default function App() {
       <Header />
       <Routes>
         <Route path="/" element={<ClientesList />} />
+        <Route path="/clientes/new" element={<AddCliente />} />
        
       </Routes>
     </Router>

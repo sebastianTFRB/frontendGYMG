@@ -1,0 +1,171 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.form-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  min-height: 100vh;
+
+  background: radial-gradient(
+    ellipse at bottom,
+    rgba(218, 165, 32, 0.4) 0%,   /* dorado suave */
+    rgba(0, 0, 0, 0.95) 70%       /* negro hacia arriba */
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Tarjeta del formulario */
+.form-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 25px 100px;
+  width: 100%;
+  max-width: 100%; /* ocupar todo el espacio disponible */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.form-card h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+  text-align: center;
+}
+
+/* Etiquetas */
+.form-card label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Inputs */
+.form-card input[type="text"],
+.form-card input[type="email"],
+.form-card input[type="number"],
+.form-card input[type="date"],
+.form-card input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  background-color: #fafafa;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  color: #333; /* color del texto */
+  background-color: #fff; 
+}
+
+.form-card input:focus {
+  border-color: #daa520; /* dorado */
+  box-shadow: 0 0 5px rgba(218, 165, 32, 0.4);
+  outline: none;
+}
+
+/* Acciones */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #daa520; /* dorado */
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #b8860b; /* dorado más oscuro */
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #565e64;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  .form-card {
+    padding: 20px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}
+
+.add-client-container {
+  display: flex;
+  gap: 30px; /* más separación entre imagen y formulario */
+  align-items: flex-start;
+  max-width: 1300px; /* un poco más ancho */
+  width: 90%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px; /* más aire interno */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+/* 📱 Vista móvil */
+@media (max-width: 768px) {
+  .add-client-container {
+    flex-direction: column;
+    align-items: center; /* Centrar imagen y formulario */
+  }
+
+  .image-preview {
+    width: 100%;
+    max-width: 300px; /* para que no se vea enorme en móvil */
+  }
+}
+
+
+.form-client {
+  flex: 2;
+}
+.image-preview {
+  flex: 1;
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}

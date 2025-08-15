@@ -43,7 +43,7 @@ export default function ClientesList() {
       <header className="users-header">
         <h1>GOLDEN Clientes</h1>
         <Link to="/clientes/new" className="btn-add">
-          ➕ Nuevo Cliente
+           Nuevo Cliente
         </Link>
       </header>
 
