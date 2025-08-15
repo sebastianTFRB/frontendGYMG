@@ -1,9 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ClientesList from "./pages/ClientesList";
-
-//import AddCliente from "./pages/AddClient";
 import AddCliente from "./pages/AddClient2";
-//import EditUser from "./pages/EditUser";
+import EditClient from "./pages/EditClient";
 import Header from "./components/Header";
 
 export default function App() {
@@ -13,10 +11,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<ClientesList />} />
         <Route path="/clientes/new" element={<AddCliente />} />
-       
+        <Route path="/clientes/edit/:id" element={<EditClient />} />
       </Routes>
     </Router>
   );
 }
-// <Route path="/new" element={<AddUser />} />
-//  <Route path="/edit/:userId" element={<EditUser />} />
+

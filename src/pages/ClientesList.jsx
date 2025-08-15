@@ -1,7 +1,7 @@
 // src/pages/ClientesList.jsx
 import React, { useEffect, useState } from "react";
 import { getClientes } from "../api/clientes";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 import "../styles/UserList.css";
 
@@ -9,13 +9,11 @@ export default function ClientesList() {
   const [clientes, setClientes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState("");
-  const navigate = useNavigate();
 
   const loadClientes = async () => {
     setLoading(true);
     try {
       const res = await getClientes();
-      // Soporta tanto array directo como respuesta en { data: [...] }
       const lista = Array.isArray(res.data) ? res.data : res.data.data || [];
       setClientes(lista);
     } catch (err) {
@@ -43,7 +41,7 @@ export default function ClientesList() {
       <header className="users-header">
         <h1>GOLDEN Clientes</h1>
         <Link to="/clientes/new" className="btn-add">
-           Nuevo Cliente
+          Nuevo Cliente
         </Link>
       </header>
 
@@ -65,15 +63,15 @@ export default function ClientesList() {
             </thead>
             <tbody>
               {filteredClientes.map((c) => (
-                <tr key={c.id_cliente}>
-                  <td>{c.id_cliente}</td>
+                <tr key={c.id}>
+                  <td>{c.id}</td>
                   <td>
-                    <button
+                    <Link
+                      to={`/clientes/edit/${c.id}`}
                       className="name-button"
-                      onClick={() => navigate(`/clientes/edit/${c.id_cliente}`)}
                     >
                       {c.nombre} {c.apellido}
-                    </button>
+                    </Link>
                   </td>
                   <td>{c.correo || "—"}</td>
                 </tr>
